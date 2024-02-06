@@ -1,0 +1,6 @@
+/*styling for the smallest devices*/
+@media screen and (max-width: 576px) {
+  .inputBox{
+    width: 220px;
+  }
+}
