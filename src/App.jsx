@@ -3,6 +3,8 @@ import "./App.css";
 import { IoMdMenu } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
+import Lottie from "lottie-react";
+import weatheranimation from "./assets/weather-animation.json"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init();
@@ -34,13 +36,24 @@ function App() {
     url: "https://api.openweathermap.org/data/2.5/"
   } 
 
+  
+  // const lottieOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: weatheranimation,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice"
+  //   }}
+
 
   return (
-    <>
-      <div className="w-full h-full flex flex-col">
+    <div>
+      <Lottie animationData={weatheranimation} className="absolute top-0 left-0 w-full h-full z-[-5]" />
+      <div className="w-full h-full flex flex-col z-[9]">
+      
         <div className="headerBar w-full p-1 flex justify-between align-center ">
           <div>Logo</div>
-          <div>Header</div>
+          <div className="text-xl font-bold">Weather App</div>
           <div><button onClick={()=>setToggleNavBar(!toggleNavBar)}><IoMdMenu /></button></div>
         </div>
 
@@ -74,7 +87,7 @@ function App() {
           </div>)}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
