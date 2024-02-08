@@ -61,10 +61,10 @@ function App() {
         speed={0.5}
         className="absolute top-0 left-0 w-full h-full z-[-5] bg-blue-300"
       />
-      <div className="w-full h-full flex flex-col z-[9] font-bold">
+      <div className="wholePage w-full h-full flex flex-col z-[9] font-bold">
         <div className="headerBar  w-full p-1 flex justify-between align-center ">
-          <div>Logo</div>
-          <div className="text-xl font-bold">Weather App</div>
+          <div className="headerLogo">Logo</div>
+          <div className="headerText font-bold">Weather App</div>
           <div>
             <button onClick={() => setToggleNavBar(!toggleNavBar)}>
             <BsThreeDotsVertical />
@@ -103,22 +103,22 @@ function App() {
             <div>Welcome to the weather app</div>
             <div>Get weather updates for your location on the go</div>
           </div>
-          <div className="pt-5 w-full flex justify-center items-center">
-            <FaSearch className="text-slate-500" />
-            <input
+          <div className="belowDesc pt-5 w-full flex flex-col justify-center items-center">
+           <div className="theSearch w-full flex items-center justify-center mb-3"> <FaSearch className="text-slate-500" />
+           <input
               onChange={(e) => setInputVal(e.target.value)}
-              className="inputBox border p-1 rounded"
+              className="inputBox border p-1 rounded h-10"
               placeholder="Search city..."
               type="text"
               name="cityName"
               id="cityName"
-            />
-            <button
+            /></div>
+            <div> <button
               onClick={buttonClicked}
-              className="p-1 ml-1 rounded text-white bg-blue-900 hover:bg-blue-600"
+              className="p-2 text-2xl rounded text-white bg-blue-900 hover:bg-blue-600"
             >
               Go!
-            </button>
+            </button></div>
           </div>
           {showWeatherInfo &&
             apiResponse &&
@@ -129,20 +129,20 @@ function App() {
               <div
                 data-aos="fade-up"
                 data-aos-duration="2000"
-                className="w-full h-auto flex flex-col items-center mt-2 absolute top-5 text-white bg-blue-600 left-0"
+                className="fadeUp w-full h-full flex flex-col items-center mt-2 absolute text-white bg-blue-600 left-0"
               >
-                <div className="pt-1 font-[500] text-lg">{dateWithoutTime}</div>
-                <div className="pt-2 pb-1 text-2xl font-extrabold">
-                  {" "}
+                <div className="datePart pt-1 font-[500]">{dateWithoutTime}</div>
+                <div className="namePart pt-2 pb-1  font-extrabold">
+                  
                   {apiResponse.name}
                 </div>
                 <div className="weatherLottie pt-1 pb-1">
                   <Lottie animationData={sunAnimation} />
                 </div>
-                <div className="pt-2 text-lg font-[400]">
+                <div className="weatherDesc pt-2 font-[400]">
                   {apiResponse.weather[0].main}
                 </div>
-                <div className="pt-1 pb-1 w-auto flex items-center justify-center text-xl font-bold">
+                <div className=" weatherTemp pt-1 pb-1 w-auto flex items-center justify-center  font-bold">
                   <div className="text-slate-400">
                     <FaTemperatureHalf />
                   </div>

@@ -1,17 +1,110 @@
-/*styling for the smallest devices*/
-@media screen and (max-width: 576px) {
+/*Styling for tablets*/
+@media screen and (max-width: 834px){
   .inputBox{
-    width: 220px;
+    width: 400px;
   }
-  .weatherLottie{
+  .wholePage{
+    font-size: xx-large;
+  }
+  .headerBar{
+    font-size: xx-large;
+  }
+  .headerText{
+    font-size: xx-large;
+  }
+  .desc{
+    font-size: xx-large;
+    margin-top: 40px;
+    padding: 10px;
+  }
+  .weatherItemsbox {
+    width: 100%;
+    height: 220px;
+  }
+  .datePart{
+    font-size: x-large;
+  }
+  .namePart{
+    font-size: xxx-large;
+  }
+  .weatherDesc{
+    font-size: xxx-large;
+  }
+  .weatherTemp{
+    font-size: xx-large;
+  }
+}
+
+/* Styling for smaller devices */
+@media screen and (max-width: 414px) {
+  .inputBox {
+    width: 250px;
+  }
+  .wholePage {
+    font-size: larger;
+  }
+  .headerBar{
+    font-size: x-large;
+  }
+  .headerText{
+    font-size: x-large;
+  }
+
+  .desc{
+    font-size: x-large;
+    padding: 10px;
+  }
+  .weatherLottie {
+    width: 200px;
+    height: 150px;
+  }
+  .weatherItemsbox {
+    width: 100%;
+    height: 220px;
+  }
+  .okButton {
+    margin-bottom: 13px;
+  }
+  .fadeUp{
+    position: absolute;
+    top: 30px;
+  }
+  .weatherDesc{
+    font-size: xx-large;
+  }
+  .weatherTemp{
+    font-size: x-large;
+  }
+}
+
+/* Styling for the smallest devices */
+@media screen and (max-width: 360px) {
+  .inputBox {
+    width: 250px;
+  }
+  .weatherLottie {
     width: 150px;
     height: 130px;
   }
-  .weatherItemsbox{
+  .weatherItemsbox {
     width: 100%;
     height: 100px;
   }
-  .okButton{
+  .okButton {
     margin-bottom: 13px;
   }
+
+  .headerText{
+    font-size: medium;
+  }
+  
+  .desc{
+    font-size: 21px;
+    padding: 5px;
+  }
+  .fadeUp{
+    position: absolute;
+    top: 30px;
+  }
+  
 }
