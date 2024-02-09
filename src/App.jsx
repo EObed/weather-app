@@ -26,6 +26,9 @@ function App() {
   //this hook will hold the value from the api response
   const [apiResponse, setApiResponse] = useState({});
 
+
+  const defW = import.meta.env.VITE_SECRET
+  
   //this function is called when the button is pressed
   const buttonClicked = () => {
     setShowWeatherInfo(!showWeatherInfo);
@@ -45,7 +48,7 @@ function App() {
   // console.log(apiResponse)
 
   const apiObj = {
-    key: "61281bed79b1fd0e3cc3e68c55a16bf4",
+    key: defW,
     url: "https://api.openweathermap.org/data/2.5/",
   };
 
@@ -162,7 +165,7 @@ function App() {
                 <div className="okButton w-full flex items-center pt-1 justify-center">
                   <button
                     onClick={handleOkClick}
-                    className="rounded w-auto p-1 text-white bg-blue-900 hover:bg-blue-700"
+                    className="rounded w-auto p-2 text-white bg-blue-900 hover:bg-blue-700"
                   >
                     Ok 👍
                   </button>
