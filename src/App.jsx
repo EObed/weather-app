@@ -67,7 +67,7 @@ function App() {
       <div className="wholePage w-full h-full flex flex-col z-[9] font-bold">
         <div className="headerBar  w-full p-1 flex justify-between align-center ">
           <div className="headerLogo">Logo</div>
-          <div className="headerText font-bold">Weather App</div>
+          <div className="headerText font-bold">MyWeather</div>
           <div>
             <button onClick={() => setToggleNavBar(!toggleNavBar)}>
             <BsThreeDotsVertical />
@@ -102,7 +102,7 @@ function App() {
               </div>
             </div>
           )}
-          <div className="desc w-full flex flex-col items-center justify-center pt-5">
+          <div className="desc w-full text-xl flex flex-col items-center justify-center pt-5">
             <div>Welcome to the weather app</div>
             <div>Get weather updates for your location on the go</div>
           </div>
